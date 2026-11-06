@@ -1,0 +1,359 @@
+{
+  "name": "Watchdog de instâncias WhatsApp - avisa cliente após 30min off",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -1584,
+        448
+      ],
+      "id": "node-01",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"conexoes\": [\n    {\n      \"conexao_nome\": \"WPP instancia-01\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-01/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": 0,\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"\"\n    },\n    {\n      \"conexao_nome\": \"WPP instancia-02\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-02/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": 0,\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"\"\n    },\n    {\n      \"conexao_nome\": \"WPP instancia-03\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-03/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": \"chat1001\",\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"https://exemplo.bitrix24.com.br/marketplace/app/1/\"\n    },\n    {\n      \"conexao_nome\": \"WPP instancia-04\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-04/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": \"chat1001\",\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"https://exemplo.bitrix24.com.br/marketplace/app/1/\"\n    },\n    {\n      \"conexao_nome\": \"WPP instancia-05\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-05/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": 1005,\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"\"\n    },\n    {\n      \"conexao_nome\": \"WPP instancia-06\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-06/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": 1006,\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"\"\n    },\n    {\n      \"conexao_nome\": \"WPP instancia-07\",\n      \"url\": \"https://api.exemplo.com/instances/instancia-07/status\",\n      \"webhook\": \"https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/\",\n      \"dialogId\": 0,\n      \"mensagem\": \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que as seguintes integrações do WhatsApp no Bitrix24 foram desconectadas.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n📲 Por favor, abra o módulo WhatsApp por Provedor A no Bitrix24, selecione a conexão desconectada, clique em conectar e faça a leitura do código QR exibido.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000, ou fale com a gente direto no [URL=https://exemplo.bitrix24.com.br/suporte]nosso canal de suporte[/URL].\\n\\nAtenciosamente,\\nCliente A 🤝\",\n      \"qr_link\": \"\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1360,
+        448
+      ],
+      "id": "node-02",
+      "name": "conexões"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "conexoes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -1136,
+        448
+      ],
+      "id": "node-03",
+      "name": "Separa em conexões individuais"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Crm-Token",
+              "value": "<API_TOKEN>"
+            },
+            {}
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -912,
+        448
+      ],
+      "id": "node-04",
+      "name": "HTTP REQUEST API",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "campo-01",
+              "name": "conexao_nome",
+              "value": "=Nome da Conexão = {{$node[\"Separa em conexões individuais\"].json[\"conexao_nome\"]}}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -688,
+        448
+      ],
+      "id": "node-05",
+      "name": "Adição do nome da conexão"
+    },
+    {
+      "parameters": {
+        "jsCode": "// ===== Memória estática entre execuções =====\nconst staticData = $getWorkflowStaticData('global');\nstaticData.lastStates     = staticData.lastStates     || {};\nstaticData.downSince      = staticData.downSince      || {};\nstaticData.clientNotified = staticData.clientNotified || {};\nstaticData.pendingDown    = staticData.pendingDown    || {};   // 1ª rodada offline, aguardando confirmação\nstaticData.apiFora        = staticData.apiFora        || false;\n\n// ===== CONFIG por conexão: vem do nó \"conexões\" =====\nconst cfgList = ($('conexões').first().json.conexoes) || [];\nconst CLIENTES = {};\nfor (const c of cfgList) { CLIENTES[c.conexao_nome] = c; }\n\nconst MINUTOS_LIMITE = 30;                   // produção = 30 (use 0 só p/ TESTE)\nconst LIMITE_MS      = MINUTOS_LIMITE * 60 * 1000;\nconst RODADAS_CONFIRMA = 2;                  // queda só vale após N rodadas seguidas offline (1 = imediato)\nconst REPETIR        = false;\nconst MASCOTE        = '';\n\n// ===== TESTE: força offline. Use o nome LIMPO (sem prefixo). Deixe [] em produção. =====\nconst TESTE_OFFLINE  = [];\n\nconst placeholder = (w) => !w || w.indexOf('exemplo.bitrix24') !== -1;\n\n// remove o prefixo \"Nome da Conexão = \" que o nó anterior adiciona\nconst limpaNome = (s) => (s || '').toString().replace(/^Nome da Conex[aã]o\\s*=\\s*/i, '').trim();\n\n// horário local (UTC-4) no formato DD/MM HH:MM\nconst fmtLocal = (ms) => {\n  if (!ms) return '';\n  const d = new Date(ms - 4 * 3600 * 1000);\n  const p = (n) => String(n).padStart(2, '0');\n  return p(d.getUTCDate()) + '/' + p(d.getUTCMonth() + 1) + ' ' + p(d.getUTCHours()) + ':' + p(d.getUTCMinutes());\n};\n\n// erro de comunicação com a API (não diz nada sobre o WhatsApp): timeout, conexão caída, 5xx, 429\nconst CODIGOS_REDE = ['ECONNRESET', 'ETIMEDOUT', 'ECONNABORTED', 'ECONNREFUSED', 'ENOTFOUND', 'EAI_AGAIN', 'EPIPE', 'ESOCKETTIMEDOUT'];\nconst statusHttp = (e) => Number(e.status || e.httpCode || e.statusCode || (String(e.message || '').match(/^(\\d{3})\\b/) || [])[1] || 0);\nconst erroDeRede = (e) => {\n  if (!e) return false;\n  const st = statusHttp(e);\n  if (CODIGOS_REDE.includes(e.code)) return true;\n  if (st >= 500 || st === 429) return true;\n  return !st;   // sem status HTTP = não chegou resposta da API\n};\n\nconst agora = Date.now();\nconst itens = $input.all().map(i => i.json);\n\nconst novasDesconectadas    = [];\nconst recuperadas           = [];\nconst clientesParaNotificar = [];\nconst semResposta           = [];\n\nconst getNome  = (i) => limpaNome(i.raw?.nomeConexao || i.nomeConexao || i.conexao_nome || '');\nconst getState = (i) => (i.state || '').toString().trim().toUpperCase();\n\nconst validos = itens.filter(i => getNome(i));\nconst todasSemResposta = validos.length > 0 && validos.every(i => erroDeRede(i.error));\n\n// ===== API inteira fora: não mexe em nenhum estado, só avisa o grupo 1x =====\nlet apiCaiu = false, apiVoltou = false;\nif (todasSemResposta) {\n  if (!staticData.apiFora) { apiCaiu = true; staticData.apiFora = agora; }\n  return [{ json: {\n    alertar: apiCaiu, apiCaiu, apiVoltou: false, apiForaDesde: fmtLocal(staticData.apiFora),\n    novasDesconectadas, recuperadas, clientesParaNotificar, semResposta,\n    temClientesParaNotificar: false, qtdNovasQuedas: 0,\n    totalOffline: Object.values(staticData.lastStates).filter(v => v === false).length\n  } }];\n}\nconst apiForaDesde = staticData.apiFora ? fmtLocal(staticData.apiFora) : '';\nif (staticData.apiFora) { apiVoltou = true; staticData.apiFora = false; }\n\nfor (const inst of itens) {\n  const nome = getNome(inst);\n  if (!nome) continue;\n\n  // falha de comunicação só desta conexão: mantém o último estado conhecido\n  if (!TESTE_OFFLINE.includes(nome) && erroDeRede(inst.error)) {\n    semResposta.push({ nome, erro: inst.error.code || inst.error.message || 'sem resposta' });\n    continue;\n  }\n\n  const state = inst.error\n    ? 'ERRO ' + (statusHttp(inst.error) || '') + ' ' + (String(inst.error.message || '').match(/error_text\\\\?\":\\\\?\"([^\"\\\\]+)/) || [, ''])[1]\n    : getState(inst);\n  const estaConectada = TESTE_OFFLINE.includes(nome) ? false : (state === 'CONNECTED' && !inst.error);\n  const anteriorEraOk = staticData.lastStates[nome] !== false;\n\n  if (!estaConectada) {\n    if (anteriorEraOk) {\n      // confirma a queda só depois de RODADAS_CONFIRMA rodadas seguidas offline\n      const pend = staticData.pendingDown[nome] || { since: agora, rodadas: 0 };\n      pend.rodadas += 1;\n      staticData.pendingDown[nome] = pend;\n      if (pend.rodadas < RODADAS_CONFIRMA) continue;\n\n      delete staticData.pendingDown[nome];\n      novasDesconectadas.push({ nome, state: state.trim() || 'SEM_STATE', desde: fmtLocal(pend.since) });\n      staticData.downSince[nome]      = pend.since;\n      staticData.clientNotified[nome] = false;\n    }\n    staticData.lastStates[nome] = false;\n\n    const desde        = staticData.downSince[nome] || agora;\n    const tempoOffline = agora - desde;\n    const jaAvisou     = staticData.clientNotified[nome] === true;\n\n    if (tempoOffline >= LIMITE_MS && (REPETIR || !jaAvisou)) {\n      const cli = CLIENTES[nome] || {};\n      const semConfig = placeholder(cli.webhook) || !cli.dialogId;\n      clientesParaNotificar.push({\n        nome,\n        minutosOffline: Math.round(tempoOffline / 60000),\n        webhook:  cli.webhook  || null,\n        dialogId: cli.dialogId || null,\n        mensagem: cli.mensagem || '',\n        imagem:   MASCOTE || '',\n        qr_link:  cli.qr_link  || '',\n        semConfig\n      });\n      staticData.clientNotified[nome] = true;\n    }\n  } else {\n    delete staticData.pendingDown[nome];\n    if (!anteriorEraOk) {\n      recuperadas.push({ nome, state: 'CONNECTED', desde: fmtLocal(staticData.downSince[nome]) });\n    }\n    staticData.lastStates[nome] = true;\n    delete staticData.downSince[nome];\n    staticData.clientNotified[nome] = false;\n  }\n}\n\nreturn [\n  {\n    json: {\n      alertar: apiVoltou || novasDesconectadas.length > 0 || recuperadas.length > 0 || clientesParaNotificar.length > 0,\n      apiCaiu,\n      apiVoltou,\n      apiForaDesde,\n      novasDesconectadas,\n      recuperadas,\n      clientesParaNotificar,\n      semResposta,\n      temClientesParaNotificar: clientesParaNotificar.length > 0,\n      qtdNovasQuedas: novasDesconectadas.length,\n      totalOffline: Object.values(staticData.lastStates).filter(v => v === false).length\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -464,
+        448
+      ],
+      "id": "node-06",
+      "name": "Padronização de dados"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "campo-02",
+              "leftValue": "={{ $json.alertar }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -240,
+        352
+      ],
+      "id": "node-07",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://exemplo.bitrix24.com.br/rest/1/<API_TOKEN>/im.message.add",
+        "sendBody": true,
+        "specifyBody": "=json",
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "jsonBody": "={{\n  {\n    DIALOG_ID: \"chat1001\",\n    URL_PREVIEW: \"N\",\n    MESSAGE: (\n      (\n        ($json.novasDesconectadas.length > 0 ? \"\" : \"Olá! Esperamos que esteja bem 😊\\n\\n\") +\n        (\n          $json.apiCaiu\n            ? \"⚠️ A API da Provedor A não está respondendo (desde \" + $json.apiForaDesde + \"). Enquanto ela estiver fora, não dá para saber o estado das conexões — nenhuma foi marcada como desconectada.\\n\\n\"\n            : \"\"\n        ) +\n        (\n          $json.apiVoltou\n            ? \"✅ A API da Provedor A voltou a responder (estava fora desde \" + $json.apiForaDesde + \"). Monitoramento normal retomado.\\n\\n\"\n            : \"\"\n        ) +\n        (\n          $json.novasDesconectadas.length > 0\n            ? $json.novasDesconectadas.map(i =>\n                \"⚠️ O Provedor A parou de funcionar na linha \" + i.nome.replace(/^WPP\\s+/i, \"\").toUpperCase() + (i.desde ? \" desde \" + i.desde : \"\") + \".\\n\" +\n                \"Enquanto não voltar, as mensagens dessa linha não entram no Bitrix. Confira a conexão e a assinatura no painel da Provedor A\" +\n                (/instancia-03/i.test(i.nome) ? \" (o robô SDR também fica parado)\" : \"\") +\n                \" e atenda pelo celular.\"\n              ).join(\"\\n\\n\") + \"\\n\\n\"\n            : \"\"\n        ) +\n        (\n          $json.recuperadas.length > 0\n            ? \"✅ Boas notícias! As seguintes conexões foram restabelecidas e já estão online novamente:\\n\\n\" +\n              $json.recuperadas.map(i => \"🟢 \" + i.nome + (i.desde ? \"\\nO que os clientes mandaram desde \" + i.desde + \" pode não ter entrado no Bitrix: confira no celular.\" : \"\")).join(\"\\n\\n\") +\n              \"\\n\\n\"\n            : \"\"\n        ) +\n        (\n          $json.clientesParaNotificar.length > 0\n            ? \"📨 Passaram +30min sem reconectar — avisamos diretamente o(s) cliente(s) no Bitrix deles:\\n\\n\" +\n              $json.clientesParaNotificar.map(i => \"🔴 \" + i.nome + \" (\" + i.minutosOffline + \" min)\" + (i.qr_link ? \" | link QR enviado\" : \"\") + (i.semConfig ? \" ⚠️ SEM CONFIG\" : \"\")).join(\"\\n\") +\n              \"\\n\\n\"\n            : \"\"\n        ) +\n        \"💬 Watchdog Cliente A — Monitoramento automático | Cliente A 🤝\"\n      ).trim()\n    )\n  }\n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -16,
+        352
+      ],
+      "id": "node-08",
+      "name": "Avisa o Grupo"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "campo-03",
+              "leftValue": "={{ $json.temClientesParaNotificar }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -240,
+        560
+      ],
+      "id": "node-09",
+      "name": "Tem cliente p/ notificar?"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "clientesParaNotificar",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -16,
+        560
+      ],
+      "id": "node-10",
+      "name": "Separa clientes"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.webhook }}im.message.add",
+        "sendBody": true,
+        "specifyBody": "=json",
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "jsonBody": "={{\n  {\n    DIALOG_ID: $json.dialogId,\n    URL_PREVIEW: \"N\",\n    MESSAGE: (() => {\n      const base = ($json.mensagem && $json.mensagem.length > 0)\n        ? $json.mensagem\n        : \"Olá! Esperamos que esteja bem 😊\\n\\nEssa mensagem foi enviada do nosso monitor automático de conexões WhatsApp.\\n\\n⚠️ Percebemos que uma integração do WhatsApp no Bitrix24 foi desconectada.\\n\\nPara restabelecer a comunicação e voltar a receber suas mensagens no Contact Center, precisamos que você leia novamente o código QR.\\n\\n💬 Caso tenha qualquer dúvida ou precise de ajuda, entre em contato com o nosso suporte pelo WhatsApp: +55 00 00000-0000.\\n\\nAtenciosamente,\\nCliente A 🤝\";\n      const linkQR = ($json.qr_link && $json.qr_link.length > 0)\n        ? \"\\n\\n🔗 [URL=\" + $json.qr_link + \"]Clique aqui para abrir o Provedor A e ler o QR code[/URL]\"\n        : \"\";\n      return base + linkQR;\n    })(),\n    ...(($json.imagem && $json.imagem.length > 0)\n      ? { ATTACH: [ { IMAGE: [ { NAME: \"Mascote\", LINK: $json.imagem, PREVIEW: $json.imagem, WIDTH: 300, HEIGHT: 300 } ] } ] }\n      : {})\n  }\n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        560
+      ],
+      "id": "node-11",
+      "name": "Avisa o Cliente no Bitrix dele",
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "conexões",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "conexões": {
+      "main": [
+        [
+          {
+            "node": "Separa em conexões individuais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separa em conexões individuais": {
+      "main": [
+        [
+          {
+            "node": "HTTP REQUEST API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP REQUEST API": {
+      "main": [
+        [
+          {
+            "node": "Adição do nome da conexão",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Adição do nome da conexão": {
+      "main": [
+        [
+          {
+            "node": "Padronização de dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Padronização de dados": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Tem cliente p/ notificar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Avisa o Grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tem cliente p/ notificar?": {
+      "main": [
+        [
+          {
+            "node": "Separa clientes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separa clientes": {
+      "main": [
+        [
+          {
+            "node": "Avisa o Cliente no Bitrix dele",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "active": false
+}
